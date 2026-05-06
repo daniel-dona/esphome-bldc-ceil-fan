@@ -22,10 +22,12 @@ external_components:
 
 ## Wiring
 
+I'm using a cheap FS1000A 433mhz transmitter, but other should work as well.
+
 | ESP32 Pin | RF Transmitter |
 |---|---|
 | GPIO32 (or any GPIO) | DATA |
-| 3.3V | VCC |
+| 5V / VIN | VCC |
 | GND | GND |
 
 ## Configuration
