@@ -20,7 +20,7 @@ void CeilingFanRf::send_button(uint8_t btn_id) {
   uint8_t offset = XOR_CONST[btn_id & 1] ^ btn_id;
   uint8_t roll = base ^ offset;
 
-  uint32_t first_packet = 0xBEC50000 | ((uint32_t) btn_id << 8) | roll;
+  uint32_t first_packet = ((uint32_t) this->fan_id_ << 16) | ((uint32_t) btn_id << 8) | roll;
   uint64_t repeat_packet = ((uint64_t) first_packet & 0x7FFFFFFF) | 0x100000000;
 
   ESP_LOGD(TAG, "btn=0x%02X step=%d base=0x%02X roll=0x%02X", btn_id, step, base, roll);
@@ -56,7 +56,10 @@ void CeilingFanRf::send_button(uint8_t btn_id) {
   call.perform();
 }
 
-void CeilingFanRf::dump_config() { ESP_LOGCONFIG(TAG, "CeilingFanRf:"); }
+void CeilingFanRf::dump_config() {
+  ESP_LOGCONFIG(TAG, "CeilingFanRf:");
+  ESP_LOGCONFIG(TAG, "  Fan ID: 0x%04X", this->fan_id_);
+}
 
 }  // namespace ceiling_fan_rf
 }  // namespace esphome
