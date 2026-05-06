@@ -2,6 +2,10 @@
 
 ESPHome external component for controlling BLDC ceiling fans via 433 MHz RF. Reverse-engineered from a generic 15-button ceiling fan remote.
 
+## Hardware
+
+Tested with this BLDC ceiling fan ([Amazon ES](https://www.amazon.es/dp/B0CTKDYTBV?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)). The included RF controller appears identical to this generic 15-button remote ([AliExpress](https://es.aliexpress.com/item/1005010488017405.html)).
+
 ## Install
 
 Add to your ESPHome YAML:
