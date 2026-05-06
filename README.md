@@ -39,6 +39,7 @@ remote_transmitter:
 # Core component — holds the transmitter and rolling code state
 ceiling_fan_rf:
   transmitter_id: my_tx
+  fan_id: 0xBEC5  # 2-byte ID unique to your fan/receiver (first 2 bytes of RF packet)
 ```
 
 ### Fan Platform

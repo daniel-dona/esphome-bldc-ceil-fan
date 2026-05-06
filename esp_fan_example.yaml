@@ -37,6 +37,7 @@ remote_transmitter:
 
 ceiling_fan_rf:
   transmitter_id: my_tx
+  fan_id: 0xBEC5
 
 fan:
   - platform: ceiling_fan_rf
