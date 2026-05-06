@@ -92,3 +92,7 @@ See [`esp_fan_example.yaml`](esp_fan_example.yaml).
 ## Protocol Details
 
 See [`analysis/`](analysis/) for the complete RF protocol reverse-engineering documentation.
+
+## AI Disclaimer
+
+I used an LLM to clean up and write parts of the documentation based on my original notes. The ESPHome component code was rewritten from an initial prototype I built with inline lambdas.
