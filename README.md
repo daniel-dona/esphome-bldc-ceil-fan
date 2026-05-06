@@ -2,6 +2,11 @@
 
 ESPHome external component for controlling BLDC ceiling fans via 433 MHz RF. Reverse-engineered from a generic 15-button ceiling fan remote.
 
+## Hardware
+
+Tested with a **Forrovenco QX-01-DE1** BLDC ceiling fan ([Amazon ES](https://www.amazon.es/dp/B0CTKDYTBV?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1)) — 132 cm, 3 blades, 6 speeds, DC motor, integrated LED light. The **Forrovenco QXPJ-001** RF controller and receiver are also sold separately ([Amazon ES](https://www.amazon.es/Forrovenco-ventilador-receptor-pulgadas-velocidades/dp/B0DHRZQRVF)). It appears identical to generic 15-button ceiling fan remote controllers found on [AliExpress](https://es.aliexpress.com/item/1005010488017405.html).
+
+The controller communicates over 433 MHz OOK PWM with a rolling code protocol. It has 15 buttons controlling fan speeds 1–6, off, direction, breeze mode, light, and timers.
 ## Install
 
 Add to your ESPHome YAML:
